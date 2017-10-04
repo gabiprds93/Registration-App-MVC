@@ -16,11 +16,14 @@ class Model
   }
   addInvited(text) 
   {
-    this.invitedList.push(
+    if(text != "" && text != " ")
     {
-        text: text,
-        listItemclassName: "",
-    });
+      this.invitedList.push(
+      {
+          text: text,
+          listItemclassName: "",
+      });
+    }
     this.inputValue = "";
     this.notify();
   }
